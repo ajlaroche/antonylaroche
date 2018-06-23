@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Col, Row, Container } from "../../components/Grid";
 import './About.css';
+import Connect from "../../components/Connect"
 
-class App extends Component {
+class About extends Component {
     render() {
         return (
             <Container>
-                <Row id="toprow" />
                 <Row />
-                <Col size="md-8" className="main-column">
+                <Row />
+                <Row />
+                <Row >
+                <Col size="md-8" other="main-column">
                     <h2>About Me</h2>
                     <img id="myfoto" src="./assets/images/CoolPicMe.jpg" className="rounded float-left" alt="Antony Laroche" width="200" />
                     <article> <p>I have a Bachelor's degree in Chemical Engineering from the University of Florida and a Master's in Engineering
@@ -26,9 +29,14 @@ class App extends Component {
                         data collection and analysis.</p>
                     </article>
                 </Col>
+                <Col size="md-4">
+                        {/* <!--contact card column--> */}
+                        <Connect />
+                    </Col>
+                    </Row>
             </Container>
         );
     }
 }
 
-export default App;
+export default About;

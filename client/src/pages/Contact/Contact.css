@@ -1,0 +1,16 @@
+
+.form-row{
+    padding-bottom: 1rem;
+    margin-left: 0rem;
+  }
+  #inputMessage{
+    height: 15rem;
+  }
+  .form-control::placeholder{
+    color: #777777;
+    opacity: 0.5;
+  }
+  .btn-primary{
+    background-color: #4aaaa5;
+    border-color: #4aaaa5;
+  }

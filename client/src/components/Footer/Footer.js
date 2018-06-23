@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = () => (
     <footer>
-    <div className="container">
+    <div >
         <span className="text-light">@Copyright 2018 Antony Laroche</span>
     </div>
 </footer>
