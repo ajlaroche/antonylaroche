@@ -3,6 +3,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import './Contact.css';
 import Connect from "../../components/Connect";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import API from "../../utils/API";
 
 class Contact extends Component {
 
@@ -10,6 +11,7 @@ class Contact extends Component {
         name: "",
         email: "",
         message: "",
+        response: "",
     };
 
     handleInputChange = event => {
@@ -19,18 +21,29 @@ class Contact extends Component {
         });
     };
 
+    validateEmail = (email) => {
+        const re = /\S+@\S+\.\S+/;
+        return re.test(String(email).toLowerCase());
+    }
+
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.name && this.state.email && this.state.message) {
-        //   API.saveBook({
-        //     title: this.state.title,
-        //     author: this.state.author,
-        //     synopsis: this.state.synopsis
-        //   })
-        //     .then(res => this.loadBooks())
-        //     .catch(err => console.log(err));
+        if (this.state.name && this.validateEmail(this.state.email) && this.state.message) {
+            API.sendMessage({
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message
+            })
+                .then(res => this.setState({
+                    name: "",
+                    email: "",
+                    message: "",
+                    response: "Message successfully sent"
+                }))
+                .catch(err => console.log(err));
+
         }
-      };
+    };
 
     render() {
         return (
@@ -42,33 +55,37 @@ class Contact extends Component {
                         <h2>Contact</h2>
                         <form>
                             {/* <!--this column will hold the email input form--> */}
-                            <label for="inputName">Name</label>
+                            <label>Name</label>
                             <Input
                                 value={this.state.name}
-                                onchange={this.handleInputChange}
+                                onChange={this.handleInputChange}
                                 name="name"
                                 placeholder="John Smith"
                             />
-                            <label for="inputEmail">Email</label>
+                            <label>Email</label>
                             <Input
                                 value={this.state.email}
-                                onchange={this.handleInputChange}
+                                onChange={this.handleInputChange}
                                 name="email"
+                                type="email"
                                 placeholder="example@gmail.com"
                             />
-                            <label for="inputMessage">Message</label>
+                            <label>Message</label>
                             <TextArea
                                 value={this.state.message}
-                                onchange={this.handleInputChange}
+                                onChange={this.handleInputChange}
                                 name="message"
                             />
                             <FormBtn
-                                disabled={!(this.state.name && this.state.email && this.state.message)}
+                                disabled={!(this.state.name && this.validateEmail(this.state.email) && this.state.message)}
                                 onClick={this.handleFormSubmit}
                             >
                                 Submit
                                 </FormBtn>
+                            
                         </form>
+                        <h5>{this.state.response}</h5>
+
                     </Col>
 
                     <Col size="md-4">
