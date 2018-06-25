@@ -1,26 +1,26 @@
 body {
     margin-bottom: 60px; /* Margin bottom by footer height */
-    background-image: url("./concrete_seamless.png");
+    background-image: url("./dark_wall.png");
     font-family: Arial,'Helvetica Neue', Helvetica, sans-serif;
     color: #777777;
     height: 100%;
   }
 
 .main-column{
-    background: #ffffff;
+    background: #181818;
   }
   
 h2{
     font-family: 'Georgia', Times, 'Times New Roman', serif;
-    color: #4aaaa5;
+    color: #c49b66;
     margin-top: 0.5rem;
-    border-bottom: #dddddd solid 2px;
+    border-bottom: #c49b66 solid 2px;
     font-weight: bold;
     padding-bottom: 0.5rem;
   }
   h3 {
-    color: #ffffff;
-    background: #4aaaa5;
+    color:#c49b66;
+    background: #181818;
     font-size: 1.5rem;
     text-align: center;
     /* margin: 15px; */
@@ -32,18 +32,43 @@ h2{
   }
 
   .container {
-    min-height:760px;
+    min-height:1180px;
   }
   .card{
-    border: none;
+        background: #181818;
+ 
+  }
+  .projects{
+    border: #c49b66 outset 2px;
+    min-height: 315px;
+    background: #181818;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .card-header:first-child{
-    border-bottom: #dddddd solid 2px;
+    border-bottom: #c49b66 solid 2px;
   }
   .card-header{
-    background: #ffffff;
+    background: #181818;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
-    color: #4aaaa5;
+    color: #c49b66;
     font-size: 1.35rem;
     font-weight: bold;
+  }
+  .card-body {
+    background: #4b4949;
+  }
+
+  .card-text{
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+  }
+
+  h3 > a{
+    color: #c49b66;
+  }
+
+  @media screen and (max-width: 980px){
+    .row{margin-top: 0.5rem; margin-bottom: 0.5rem;}
   }

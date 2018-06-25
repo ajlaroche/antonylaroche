@@ -19,13 +19,12 @@ class About extends Component {
                         industry in a wide variety of roles ranging from process engineering to project development and refinery
                         economics.</p>
                     </article>
-                    <article><p>In addition to my work as an engineer, I have a passion for finance and economics. As a result, I spend a
-                    lot of my spare time reading and analyzing the financial news of the day. I take pleasure in deciphering insights from the wealth of data available to us from news outlets and government agencies with the ultimately
+                    <article><p>I have a passion for finance and economics. As a result, I spend a
+                    lot of my spare time reading and analyzing the financial news of the day. I take pleasure in deciphering insights from the wealth of data available to us from news outlets and government agencies with the ultimate
                     goal of converting those insight to personal investment strategies and general worldly advice.</p>
                     </article>
-                    <article><p>I aspire to be a Full Stack Web Developer who is available to perform freelance work for content producers
-                        who want to share their art, skills, wisdom, and knowledge with the world. I also look forward to using
-                        my skills to enhance 3rd party developed websites by improving user experience, adding interactivity,
+                    <article><p>I am a Full Stack Web Developer who can turn flat content into engaging, smart, web applications.
+                        I use my skills to share wisdom, insights and knowledge with the world. I look forward to helping you share your expertise with others through fully deployed websites that engage readers through interactive content,
                         data collection and analysis.</p>
                     </article>
                 </Col>

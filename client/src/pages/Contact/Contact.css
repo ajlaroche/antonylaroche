@@ -7,10 +7,15 @@
     height: 15rem;
   }
   .form-control::placeholder{
-    color: #777777;
-    opacity: 0.5;
+    color: whitesmoke;
+    opacity: 0.3;
   }
-  .btn-primary{
-    background-color: #4aaaa5;
-    border-color: #4aaaa5;
+  .btn-success:disabled, .btn-success{
+    background-color: #c49b66;
+    border-color: #c49b66;
+    color: #181818;
+  }
+
+  .form-control {
+    background-color: #8d8b8b;
   }
