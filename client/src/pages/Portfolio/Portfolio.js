@@ -42,7 +42,7 @@ class Portfolio extends Component {
                                                 <img className="card-img-top" src={project.image} alt={project.title} />
                                             </a>
                                             <div className="card-text">
-                                                <h3><a href={project.link}>{project.title}</a><a href={project.repo}><i class="fab fa-github"></i></a></h3>
+                                                <h3><a href={project.link}>{project.title}</a><a href={project.repo}><i className="fab fa-github"></i></a></h3>
                                             </div>
                                         </div>
                                     </Col>

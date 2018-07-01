@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 980px){
-    .navbar{padding-left: 0rem; padding-right: 0%;}
+    .navbar{padding-left: 0rem; padding-right: 0%; display: block}
     .navbar-brand{width:100%;margin-right: 0rem; text-align: center;}
-    .nav.justify-content-end{padding-right: 0rem;}
+    .nav.justify-content-end{justify-content: center!important;padding-right: 0rem}
      }

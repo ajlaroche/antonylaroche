@@ -49,8 +49,7 @@
   }
   
   .intro{
-      margin-top: 5rem;
-      min-height: 100px;
+    min-height: 65px;
   }
 
   .buttonLinks{
@@ -83,7 +82,19 @@
       margin-top: 2rem;
       text-align: center;
   }
+
+  .introMobil{display:none}
   
+  @media screen and (max-width: 980px){
+    .intro, .subintro{display: none}
+    .rounded-circle{width: 70%}
+    .btn-primary{margin-right: 1rem; min-width: 7rem;}
+    .buttonLinks{margin-left: 0.5rem;}
+    .introMobil{display: block; text-align: center;}
+    .introMobil > h1{font-size: 1.75rem;}
+    .introMobil > p{font-size: 1.5rem;}
+  }
+
 
 
 

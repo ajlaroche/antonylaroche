@@ -11,6 +11,8 @@ const Mytools = () => (
             <img className="tools" src="./assets/images/tools/mongodb.svg" alt="mongo" />
             <img className="tools" src="./assets/images/tools/MySQL.svg" alt="mysql" />
             <img className="tools" src="./assets/images/tools/express.png" alt="express" />
+            <img className="tools" src="./assets/images/tools/bootstrap-stack.png" alt="bootstrap" />
+            <img className="tools" src="./assets/images/tools/html5.svg" alt="html5" />
         </div>
     </div>
 );
