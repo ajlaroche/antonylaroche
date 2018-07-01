@@ -1,0 +1,89 @@
+.typewriter1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #c49b66; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+      width: 50rem;
+      font-size: 3rem;
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end 4;  
+      
+  }
+
+  .typewriter2{
+   opacity: 0;
+   font-size: 2.5rem;
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #c49b66; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    width: 25rem;
+      font-size: 2.5rem;
+    animation: 
+      typing2 2.5s steps(40, end),
+      blink-caret .75s step-end 4;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+      }
+
+  @keyframes typing2 {
+    0%{width: 0;}
+    from {opacity:0;}
+    1%{opacity:1;}
+    to{opacity:1;}
+      }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #c49b66; }
+    100% { border-color: #c49b66; }
+  }
+  
+  .intro{
+      margin-top: 5rem;
+      min-height: 100px;
+  }
+
+  .buttonLinks{
+      display: flex;
+      align-items: center;
+      margin-top: 5rem;
+  }
+
+  .btn-primary{
+      background-color: #c49b66;
+      color: #181818;
+      font-weight: 700;
+      border-color: #c49b66;
+      margin-right: 4rem;
+      min-width: 6rem;
+  }
+
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #181818;
+    color: #c49b66;
+    border-color: #c49b66;
+  }
+
+  .rounded-circle{
+      /* border-radius: 50%; */
+      width: 15%;
+  }
+
+  .introPic{
+      margin-top: 2rem;
+      text-align: center;
+  }
+  
+
+
+

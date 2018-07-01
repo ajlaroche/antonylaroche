@@ -4,6 +4,8 @@ import './Contact.css';
 import Connect from "../../components/Connect";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
 
 class Contact extends Component {
 
@@ -47,52 +49,56 @@ class Contact extends Component {
 
     render() {
         return (
-            <Container>
-                {/* <!--this row adds space above entry area--> */}
-                <Row id="toprow"></Row>
-                <Row>
-                    <Col size="md-8" other="main-column">
-                        <h2>Contact</h2>
-                        <form>
-                            {/* <!--this column will hold the email input form--> */}
-                            <label>Name</label>
-                            <Input
-                                value={this.state.name}
-                                onChange={this.handleInputChange}
-                                name="name"
-                                placeholder="John Smith"
-                            />
-                            <label>Email</label>
-                            <Input
-                                value={this.state.email}
-                                onChange={this.handleInputChange}
-                                name="email"
-                                type="email"
-                                placeholder="example@gmail.com"
-                            />
-                            <label>Message</label>
-                            <TextArea
-                                value={this.state.message}
-                                onChange={this.handleInputChange}
-                                name="message"
-                            />
-                            <FormBtn
-                                disabled={!(this.state.name && this.validateEmail(this.state.email) && this.state.message)}
-                                onClick={this.handleFormSubmit}
-                            >
-                                Submit
+            <div>
+                <Nav />
+                <Container>
+                    {/* <!--this row adds space above entry area--> */}
+                    <Row id="toprow"></Row>
+                    <Row>
+                        <Col size="md-8" other="main-column">
+                            <h2>Contact</h2>
+                            <form>
+                                {/* <!--this column will hold the email input form--> */}
+                                <label>Name</label>
+                                <Input
+                                    value={this.state.name}
+                                    onChange={this.handleInputChange}
+                                    name="name"
+                                    placeholder="John Smith"
+                                />
+                                <label>Email</label>
+                                <Input
+                                    value={this.state.email}
+                                    onChange={this.handleInputChange}
+                                    name="email"
+                                    type="email"
+                                    placeholder="example@gmail.com"
+                                />
+                                <label>Message</label>
+                                <TextArea
+                                    value={this.state.message}
+                                    onChange={this.handleInputChange}
+                                    name="message"
+                                />
+                                <FormBtn
+                                    disabled={!(this.state.name && this.validateEmail(this.state.email) && this.state.message)}
+                                    onClick={this.handleFormSubmit}
+                                >
+                                    Submit
                                 </FormBtn>
-                            
-                        </form>
-                        <h5>{this.state.response}</h5>
 
-                    </Col>
+                            </form>
+                            <h5>{this.state.response}</h5>
 
-                    <Col size="md-4">
-                        <Connect />
-                    </Col>
-                </Row>
-            </Container>
+                        </Col>
+
+                        <Col size="md-4">
+                            <Connect />
+                        </Col>
+                    </Row>
+                </Container>
+                <Footer />
+            </div>
         );
     }
 }

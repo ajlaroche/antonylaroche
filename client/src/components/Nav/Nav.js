@@ -3,7 +3,7 @@ import "./Nav.css";
 
 const Nav = () => (
   <nav className="navbar navbar-light">
-        <span className="navbar-brand mb-0 h1">Antony Laroche</span>
+      <a href="/"> <span className="navbar-brand mb-0 h1">Antony Laroche</span></a>
         <ul className="nav justify-content-end">
             <li className="nav-item">
                 <a className="nav-link" href="/about">About</a>
