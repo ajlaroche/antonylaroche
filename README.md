@@ -1,29 +1,29 @@
-# Create React Express App
+# Antony Laroche — Portfolio
 
-## About This Boilerplate
+Personal portfolio site: landing page, about, project portfolio and a contact form that emails me.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+**Stack:** React 19 · TypeScript · Vite · React Router · Tailwind CSS v4 · Express 5 · Nodemailer
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Run it locally
 
-## Starting the app locally
+Requires Node.js 22 or newer.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-yarn install
-``
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
+```bash
+npm install
+npm run dev
 ```
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+The site runs at <http://localhost:5173>. Vite proxies `/api` requests to the Express server on port 3001.
 
-## Deployment (Heroku)
+## Production
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+```bash
+npm run build
+npm start
+```
+
+`npm start` serves the built site from `dist/` and the API from one Express server on `PORT` (default 3001).
+
+## Contact form
+
+Copy `.env.example` to `.env` and fill in your SMTP settings. Without them, the form shows a friendly "not configured" message instead of sending email.
